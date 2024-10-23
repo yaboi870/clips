@@ -1,216 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="870 clips" content="width=device-width, initial-scale=1">
-<style>
-body{
-  background-color: black;
-  text-align: center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #141414; /* Grey background */
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav button {
+            margin: 0 10px;
+            font-size: 20px;
+            padding: 10px 15px;
+            font-family:  Verdana, sans-serif;
+            cursor: pointer;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: white;
+            padding-top: 60px; /* Adjusted padding to accommodate nav */
+        }
+        section h2 {
+            font-size: 24px; /* Smaller section title */
+            margin-bottom: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        #section1 {
+            background-color: #363636; 
+            color: red;
+        }
+        #section2 {
+            background-color: #363636; 
+            color: rgb(5, 158, 230);
+        }
+        #section3 {
+            background-color: #363636; 
+            color: greenyellow;
+        }
+        video {
+            width: 30%; /* Each video takes 30% of the section width */
+        }
 
-html{
-scroll-behavior: smooth;
-}
+        .hope{
+             position: absolute;
+             left:62%;
+             top:30px;
+        }
 
-#section1 {
-  height: 900px;
-  background-color: rgb(0, 0, 0);
-  color:rgb(30, 153, 6);
-}
+        bhope{
+            position: absolute;
+            left:47%;
+            top:990px;
+        }
 
-#section2 {
-  height: 900px;
-  background-color: rgb(0, 0, 0);
-  color:rgb(30, 153, 6);
-}
-
-#section3 {
-  height: 900px;
-  background-color: rgb(0, 0, 0);
-  color:rgb(30, 153, 6);
-}
-
-.a{
-  position: absolute;
-  top:40px;
-}
-
-.b{
-  position: absolute;
-  top:960px;
-}
-
-.c{
-  position: absolute;
-  top:1850px;
-}
-
-.l{
-  left:5%;
-}
-
-.ll{
-  left:38%;
-}
-
-.lll{
-  left:70%;
-}
-
-.llll{
-  left:15%;
-}
-
-.lllll{
-  left:55%;
-}
-
-.llllll{
-  left:35%;
-}
-
-.lol{
-  position: absolute;
-  top:30px;
-  left: 40%;
-  font-size: 20px;
-  color:red;
-}
-
-.lool{
-  position: absolute;
-  top:940px;
-  left: 40%;
-  font-size: 20px;
-  color:rgb(55, 0, 255);
-}
-
-.loool{
-  position: absolute;
-  top:1840px;
-  left: 40%;
-  font-size: 20px;
-}
-
-.alink{
-  position: absolute;
-  left:8px;
-  top: 800px;
-  color: blue;
-}
-
-.blink{
-  position: absolute;
-  left:8px;
-  top: 824px;
-  color:rgb(30, 153, 6);
-  text-underline-offset: 0;
-}
-
-.clink{
-  position: absolute;
-  left:8px;
-  top: 1700px;
-  color:red;
-  text-underline-offset: 0;
-}
-
-.dlink{
-  position: absolute;
-  left:8px;
-  top: 1724px;
-  color:rgb(30, 153, 6);
-  text-underline-offset: 0;
-}
-
-.elink{
-  position: absolute;
-  left:8px;
-  top: 2624px;
-  color:blue;
-  text-underline-offset: 0;
-}
-
-.flink{
-  position: absolute;
-  left:8px;
-  top: 2600px;
-  color:red;
-  text-underline-offset: 0;
-}
-
-.hope{
-  position: absolute;
-  left:62%;
-  top:30px;
-}
-
-.bhope{
-  position: absolute;
-  left:47%;
-  top:990px;
-}
-
-.chope{
-  position: absolute;
-  left:60%;
-  top:1860px;
-}
-
-</style>
+        .chope{
+          position: absolute;
+          left:60%;
+           top:1860px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="main" id="section1">
-  <h4 class="lol">This is a colection of my team fortress 2 clips </h4>
-  <a><img src="8.svg" height="50" class="hope"></a>
+<nav>
+    <button onclick="scrollToSection('section1')">1</button>
+    <button onclick="scrollToSection('section2')">2</button>
+    <button onclick="scrollToSection('section3')">3</button>
+</nav>
 
-<video width="480" height="360" controls class="a l">
-  <source src="TF2 v1.mp4" type="video/mp4">
-</video>
+<section id="section1">
+    <h2>Team Fortress 2</h2>
+    
+    <div class="video-container">
+        <video controls>
+            <source src="TF2 v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="TF2 v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="TF2 v3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
-<video width="480" height="360" controls class="a ll">
-  <source src="TF2 v2.mp4" type="video/mp4">
-</video>
+<section id="section2">
+    <h2>ULTRAKILL</h2>
+    <div class="video-container">
+        <video controls>
+            <source src="ULTRAKILL v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="ULTRAKILL v2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+</section>
 
-<video width="480" height="360" controls class="a lll" >
-  <source src="TF2 v3.mp4" type="video/mp4" >
-</video>
+<section id="section3">
+    <h2>Split Gate</h2>
+    <div class="video-container">
+        <video controls>
+            <source src="SplitGate v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+</section>
 
-<a href="#section2" class="alink">click here to see Ultrkill clips &darr;</a>
-<a href="#section3" class="blink">click here to see Splitgate clips &darr;</a>
-</div>
-
-<div class="main" id="section2">
-  <h4 class="loool">This is a colection of Ultrakill clips</h4>
-  <a><img src="7.png" height="50" class="bhope"></a>
-
-  <video width="480" height="360" controls class="b llll">
-    <source src="ULTRAKILL v1.mp4" type="video/mp4">
-  </video>
-  
-  <video width="480" height="360" controls class="b lllll" >
-    <source src="ULTRAKILL v2.mp4" type="video/mp4" >
-  </video>
-
-<a href="#section1" class="clink">click here to see team fortress 2 clips &uarr;</a>
-<a href="#section3" class="dlink">click here to see Splitgate clips &darr;</a>
-
-</div>
-
-<div class="main" id="section3">
-  <h4 class="lool">This is a colection of Splitgate clips</h4>
-  <a ><img src="9.png" height="80" class="chope"></a>
-
-<video width="480" height="360" controls class="c llllll">
-  <source src="SplitGate v1.mp4" type="video/mp4">
-</video>
-
-<a href="#section2" class="elink">click here to see Ultrkill clips &uarr;</a>
-<a href="#section1" class="flink">click here to see team fortress 2 clips &uarr;</a>
-
-</div>
+<script>
+    function scrollToSection(sectionId) {
+        const targetElement = document.getElementById(sectionId);
+        const navHeight = document.querySelector('nav').offsetHeight; // Get nav height
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight; // Adjust position
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+</script>
 
 </body>
 </html>
-
